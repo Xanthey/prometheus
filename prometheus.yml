@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 1m
+
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["192.168.1.5:776"]
+
+  - job_name: "node"
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["192.168.1.5:775"]
+
+  - job_name: "cadvisor"
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["192.168.1.5:774"]
+
+  - job_name: "pihole"
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["192.168.1.5:9617"]
