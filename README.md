@@ -8,7 +8,7 @@ Make sure to check the ports as it is set to MY scheme, which may not work for y
 * Prometheus
 * Node Exporter
 * Cadvisor
-*Redis
+* Redis
 
 -------------------------------------
 # Prometheus.yml Notes:
