@@ -11,5 +11,17 @@ Make sure to check the ports as it is set to MY scheme, which may not work for y
 * Redis
 
 -------------------------------------
-# Prometheus.yml Notes:
-In this file all of the jobs are set to my server on LAN IP x.x.x.5, make sure to adjust this to the IP of your actual server, or whatever it is you are wanting to scrape data from. 
+
+# Installation Notes:
+* Copy all files to a directory of your choosing
+> I use home/{username}/docker/{project-name}/
+* Open the ```docker-compose.yml``` file and edit appropriately
+> Please make sure to note the ports you choose and any other variables you want to change
+* Open ```prometheus.yml``` and edit the IP/port of the machines you want to scrape data from
+> The values in there now are for my docker host, you will need to change these IPs unless you lock your server to 192.168.1.5.
+> Basically, just change the IP address to your server(s) IP address(es) unless you changed the ports too.
+> Edit accordingly, just pay attention to what you're doing and you'll be fine.
+* Open a terminal in this directory
+* ``` sudo docker-compose down ```
+* ``` sudo docker-compose up -d ```
+> **Configuring Grafana, Telegraf, Prometheus, InfluxDB, and your dashboards is outside the scope of this readme.**
